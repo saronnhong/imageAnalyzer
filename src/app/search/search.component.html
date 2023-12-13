@@ -1,0 +1,92 @@
+<div class="row">
+    <mat-form-field class="dropdown" appearance="outline">
+        <mat-label>Gender</mat-label>
+        <mat-select [(value)]="searchOptions['gender']">
+            <mat-option>None</mat-option>
+            <mat-option value="male">Male</mat-option>
+            <mat-option value="female">Female</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="dropdown" appearance="outline">
+        <mat-label>Emotion</mat-label>
+        <mat-select [(value)]="searchOptions['emotion']">
+            <mat-option>None</mat-option>
+            <mat-option value="happy">Happy</mat-option>
+            <mat-option value="calm">Calm</mat-option>
+            <mat-option value="surprised">Surprised</mat-option>
+            <mat-option value="sad">Sad</mat-option>
+            <mat-option value="angry">Angry</mat-option>
+            <mat-option value="confused">Confused</mat-option>
+            <mat-option value="disgusted">Disgusted</mat-option>
+            <mat-option value="fear">Fear</mat-option>
+            <mat-option value="unkown">Unknown</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="dropdown" appearance="outline">
+        <mat-label>Smile</mat-label>
+        <mat-select [(value)]="searchOptions['smile']">
+            <mat-option>None</mat-option>
+            <mat-option value="true">True</mat-option>
+            <mat-option value="false">False</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="dropdown" appearance="outline">
+        <mat-label>Eye Glasses</mat-label>
+        <mat-select [(value)]="searchOptions['eye_glasses']">
+            <mat-option>None</mat-option>
+            <mat-option value="true">True</mat-option>
+            <mat-option value="false">False</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="dropdown" appearance="outline">
+        <mat-label>Sun Glasses</mat-label>
+        <mat-select [(value)]="searchOptions['sun_glasses']">
+            <mat-option>None</mat-option>
+            <mat-option value="true">True</mat-option>
+            <mat-option value="false">False</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="dropdown" appearance="outline">
+        <mat-label>Beard</mat-label>
+        <mat-select [(value)]="searchOptions['beard']">
+            <mat-option>None</mat-option>
+            <mat-option value="true">True</mat-option>
+            <mat-option value="false">False</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="dropdown" appearance="outline">
+        <mat-label>Mustache</mat-label>
+        <mat-select [(value)]="searchOptions['mustache']">
+            <mat-option>None</mat-option>
+            <mat-option value="true">True</mat-option>
+            <mat-option value="false">False</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="dropdown" appearance="outline">
+        <mat-label>Eyes Open</mat-label>
+        <mat-select [(value)]="searchOptions['eyes_open']">
+            <mat-option>None</mat-option>
+            <mat-option value="true">True</mat-option>
+            <mat-option value="false">False</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="dropdown" appearance="outline">
+        <mat-label>Mouth Open</mat-label>
+        <mat-select [(value)]="searchOptions['mouth_open']">
+            <mat-option>None</mat-option>
+            <mat-option value="true">True</mat-option>
+            <mat-option value="false">False</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+
+
+<br>
+<button class="getDetailsButton" (click)="querySearch()">Search</button>
+<br>
+
+<div class="image-row">
+    <div *ngFor="let image of imageData" class="image-container">
+        <img class="imagePreview" [src]="'https://final-project-sn.s3.amazonaws.com/' + image[1]" alt="Image" />
+    </div>
+</div>

@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'imageAnalyzer';
+
+  receivedData: any;
+
+  passData(data: any) {
+    this.receivedData = data;
+  }
 }

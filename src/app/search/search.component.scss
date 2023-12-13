@@ -1,0 +1,52 @@
+.imagePreview {
+    height: 200px;
+}
+
+.image-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-container {
+    flex: 0 0 auto;
+    margin: 5px;
+}
+.dropdown{
+    margin: 5px;
+}
+
+.row{
+    width: 70%;
+}
+
+.getDetailsButton {
+    display: inline-block;
+    padding: 0.6em 1.2em;
+    border: 0.1em solid #ffffff;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+    transition: all 0.2s;
+    background-color: #1DA1F2;
+}
+
+.getDetailsButton:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+::ng-deep {
+    .mat-select-value,
+    .mat-form-field-appearance-outline .mat-form-field-outline,
+    .mat-form-field-label,
+    .mat-select-arrow,  
+    .mat-select-value{
+      color: rgba(0,0,0,.8) !important;
+    }
+  }
+

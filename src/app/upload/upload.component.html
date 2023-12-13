@@ -1,0 +1,12 @@
+<div *ngIf="isLoading" class="loading-container">
+    <mat-spinner  diameter="50" color="accent"></mat-spinner>
+  </div>
+
+<label for="fileInput" class="uploadLabel">
+    Upload File
+</label>
+<input id="fileInput" type="file" (change)="onFileSelected($event)" style="display: none;" />
+<p>{{resultText}}</p>
+<div *ngIf="showImg">
+    <img class="imagePreview" [src]="imageUrl" alt="uploaded_image">
+</div>

@@ -1,0 +1,58 @@
+<button class="getDetailsButton" (click)="requestImageDetails()">Get Image Details</button>
+
+<div *ngIf="showTable && dataSource.length != 0">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <ng-container matColumnDef="file_name">
+            <th mat-header-cell *matHeaderCellDef> File Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.file_name}} </td>
+        </ng-container>
+        <ng-container matColumnDef="gender">
+            <th mat-header-cell *matHeaderCellDef> Gender </th>
+            <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+        </ng-container>
+        <ng-container matColumnDef="age">
+            <th mat-header-cell *matHeaderCellDef> Age </th>
+            <td mat-cell *matCellDef="let element"> {{element.age}} </td>
+        </ng-container>
+        <ng-container matColumnDef="emotion">
+            <th mat-header-cell *matHeaderCellDef> Emotion </th>
+            <td mat-cell *matCellDef="let element"> {{element.emotion}} </td>
+        </ng-container>
+        <ng-container matColumnDef="smile">
+            <th mat-header-cell *matHeaderCellDef> Smile </th>
+            <td mat-cell *matCellDef="let element"> {{element.smile}} </td>
+        </ng-container>
+        <ng-container matColumnDef="eye_glasses">
+            <th mat-header-cell *matHeaderCellDef> Eye Glasses </th>
+            <td mat-cell *matCellDef="let element"> {{element.eye_glasses}} </td>
+        </ng-container>
+        <ng-container matColumnDef="sun_glasses">
+            <th mat-header-cell *matHeaderCellDef> Sun Glasses </th>
+            <td mat-cell *matCellDef="let element"> {{element.sun_glasses}} </td>
+        </ng-container>
+        <ng-container matColumnDef="beard">
+            <th mat-header-cell *matHeaderCellDef> Beard </th>
+            <td mat-cell *matCellDef="let element"> {{element.beard}} </td>
+        </ng-container>
+        <ng-container matColumnDef="mustache">
+            <th mat-header-cell *matHeaderCellDef> Mustache </th>
+            <td mat-cell *matCellDef="let element"> {{element.mustache}} </td>
+        </ng-container>
+        <ng-container matColumnDef="eyes_open">
+            <th mat-header-cell *matHeaderCellDef> Eyes Open </th>
+            <td mat-cell *matCellDef="let element"> {{element.eyes_open}} </td>
+        </ng-container>
+        <ng-container matColumnDef="mouth_open">
+            <th mat-header-cell *matHeaderCellDef> Mouth Open </th>
+            <td mat-cell *matCellDef="let element"> {{element.mouth_open}} </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
+<div *ngIf="showTable && dataSource.length === 0">
+    <br>
+    <p >
+        No data available. 
+    </p>
+</div>
